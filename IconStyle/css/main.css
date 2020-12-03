@@ -1,0 +1,78 @@
+/* Common Css  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,h3,h4,h5,h6{
+    font-family: 'Roboto', sans-serif;
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+}
+html{
+	font-size: 62.5%;
+}
+
+.main_div{
+	height: 100vh;
+	width: 100vw;
+	background-color: #243747 ;
+	display: grid;
+	place-items: center;
+}
+.center_div{
+	padding: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 4px 3px 13px rgba(0, 0, 0, 0.6);
+	border-radius: .8rem;
+}
+
+.icon_box{
+	margin-right: 1.5rem;
+	padding: 2rem;
+	/* background-color: rgba(66, 66, 66, 0.904); */
+	box-shadow: 4px 3px 13px #172027;
+	border-radius: 50%;
+	transition: all 0.3s linear;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+.icon_box i{
+	transition: all 0.3s linear;
+	z-index: 99;
+	cursor: pointer;
+
+}
+.icon_box::before {
+	position: absolute;
+	content: "";
+	height: 120%;
+	width: 120%;
+	background-color: #0652DD;
+	left: -68%;
+	top: 80%;
+	transform: rotate(255deg);
+	transition: all 0.3s linear;
+	
+
+}
+.icon_box:hover::before{
+	left: 0%;
+	top: 0%;
+	transform: rotate(0deg);
+	z-index: -1;
+}
+.icon_box:hover i{
+	color: #fff !important;
+}
